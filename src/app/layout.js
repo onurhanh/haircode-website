@@ -1,6 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Oswald } from 'next/font/google';
 
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '600'], // kullanacağın kalınlıklar
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={oswald.className}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
