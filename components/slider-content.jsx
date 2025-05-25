@@ -18,7 +18,7 @@ export default function SliderContent() {
       </motion.h2>
 
       {/* Dikey çizgi */}
-      <div className="w-px h-20 bg-white mx-auto my-10" />
+      <div className="w-px h-13 sm:h-20 bg-white mx-auto my-5 sm:my-10" />
 
       {/* Aşağıdan çıkan adres */}
       <motion.div
