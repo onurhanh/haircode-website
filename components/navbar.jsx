@@ -56,17 +56,17 @@ const Navbar = () => {
         ${bgTransparent ? 'bg-transparent' : 'bg-black'} 
         text-white`}
     >
-      <div className="max-w-7xl mx-auto py-4 px-8 sm:px-4 flex justify-between items-center relative">
+      <div className="max-w-7xl mx-auto py-4 px-8 md:px-14 lg:px-4 flex justify-between items-center relative">
         {/* Mobilde sol: hamburger */}
         <button
-          className="md:hidden text-2xl"
+          className="lg:hidden text-2xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
         </button>
 
         {/* Masaüstüde sol: normal linkler */}
-        <div className="hidden md:flex space-x-2">
+        <div className="hidden lg:flex space-x-3 text-sm">
           {navLink("/", "Anasayfa")}
           {navLink("#hakkimizda", "Hakkımızda")}
           {navLink("#hizmetler", "Hizmetler")}
@@ -80,10 +80,10 @@ const Navbar = () => {
 
         {/* Sağ: “Yol Tarifi” ve “Randevu Al” */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             {navLink("#iletisim", "Yol Tarifi")}
           </div>
-          <Button asChild className="rounded-none cursor-pointer text-sm md:text-base">
+          <Button asChild className="rounded-none cursor-pointer text-xs md:text-sm lg:text-base">
             <a
               href="https://wa.me/905412524864?text=Merhaba%2C%20randevu%20almak%20istiyorum"
               target="_blank"
@@ -103,7 +103,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="md:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3"
+            className="lg:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3 text-base"
           >
             {navLink("/", "Anasayfa")}
             {navLink("#hakkimizda", "Hakkımızda")}
@@ -113,6 +113,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
     </motion.nav>
   );
 };
