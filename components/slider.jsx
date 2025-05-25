@@ -18,7 +18,7 @@ const HeroSlider = () => {
 
     return (
         <div>
-            <div className="absolute z-50 w-full">
+            <div id="/" className="absolute z-50 w-full">
                 <Navbar />
             </div>
 
@@ -28,7 +28,7 @@ const HeroSlider = () => {
                 loop={true}
                 autoplay={{ delay: 3500, disableOnInteraction: false }}
                 fadeEffect={{ crossFade: true }}
-                className="w-screen h-screen z-10 relative"
+                className="w-full h-screen z-10 relative"
                 speed={1700}
             >
                 {slides.map((src, i) => (

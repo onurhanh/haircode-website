@@ -1,6 +1,8 @@
 "use client"
 
 import About from "../../components/about";
+import Contact from "../../components/contact";
+import Services from "../../components/services";
 import Slider from "../../components/slider";
 
 
@@ -10,6 +12,8 @@ export default function Home() {
     <div>
     <Slider />
     <About />
+    <Services />
+    <Contact />
     </div>
   );
 }
