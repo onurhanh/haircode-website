@@ -1,11 +1,9 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
-import { motion } from "framer-motion";
+import { useEffect, useState, useRef } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import { AnimatePresence } from 'framer-motion';
-
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -13,19 +11,30 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // ✅ Menü durumu için ref (her zaman güncel değeri taşır)
+  const isMenuOpenRef = useRef(false);
+
+  // ✅ isMenuOpen değiştiğinde ref’i güncelle
+  useEffect(() => {
+    isMenuOpenRef.current = isMenuOpen;
+  }, [isMenuOpen]);
+
+  // ✅ Scroll olunca menüyü kapat
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
 
-      // sadece geniş ekranlarda scroll gizleme
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         if (currentY > lastScrollY && currentY > 100) {
           setShow(false);
         } else {
           setShow(true);
         }
-      } else {
-        setShow(true); // mobilde daima görünür
+      }
+
+      // ✅ Menü açıksa scroll olunca kapat
+      if (isMenuOpenRef.current) {
+        setIsMenuOpen(false);
       }
 
       setBgTransparent(currentY <= 50);
@@ -42,8 +51,19 @@ const Navbar = () => {
         {label}
       </a>
       <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 
-                       group-hover:w-full transition-all duration-300"></span>
+                    group-hover:w-full transition-all duration-300"></span>
     </div>
+  );
+
+  const navLinkMobile = (href, label) => (
+    <a
+      href={href}
+      className="text-white relative group px-2 py-1 inline-block cursor-pointer"
+    >
+      {label}
+      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 
+                     group-hover:w-full transition-all duration-300"></span>
+    </a>
   );
 
   return (
@@ -105,15 +125,14 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="lg:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3 text-base"
           >
-            {navLink("/", "Anasayfa")}
-            {navLink("#hakkimizda", "Hakkımızda")}
-            {navLink("#hizmetler", "Hizmetler")}
-            {navLink("#iletisim", "İletişim")}
-            {navLink("#iletisim", "Yol Tarifi")}
+            {navLinkMobile("/", "Anasayfa")}
+            {navLinkMobile("#hakkimizda", "Hakkımızda")}
+            {navLinkMobile("#hizmetler", "Hizmetler")}
+            {navLinkMobile("#iletisim", "İletişim")}
+            {navLinkMobile("#iletisim", "Yol Tarifi")}
           </motion.div>
         )}
       </AnimatePresence>
-
     </motion.nav>
   );
 };
