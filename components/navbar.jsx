@@ -4,6 +4,18 @@ import { Button } from '@/components/ui/button';
 import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+  AlertDialogDescription,
+} from "@/components/ui/alert-dialog";
+
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -113,15 +125,36 @@ const Navbar = () => {
           <div className="hidden lg:block">
             {navLink("#yoltarifi", "Yol Tarifi")}
           </div>
-          <Button asChild className="rounded-none cursor-pointer text-xs md:text-sm lg:text-base">
-            <a
-              href="https://wa.me/905412524864?text=Merhaba%2C%20randevu%20almak%20istiyorum"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Randevu Al
-            </a>
-          </Button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button className="rounded-none cursor-pointer text-xs md:text-sm lg:text-base">
+                Randevu Al
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>WhatsApp'a yönlendirileceksiniz</AlertDialogTitle>
+                <AlertDialogDescription>
+                  Randevu almak için WhatsApp üzerinden iletişim kurmak istiyor musunuz?
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Vazgeç</AlertDialogCancel>
+                <AlertDialogAction
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/905412524864?text=Merhaba%2C%20randevu%20almak%20istiyorum",
+                      "_blank"
+                    )
+                  }
+                >
+                  Evet, devam et
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+
+
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import Contact from "../../components/contact";
 import Directions from "../../components/directions";
 import Services from "../../components/services";
 import Slider from "../../components/slider";
+import Waicon from "../../components/waicon";
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
     <Services />
     <Contact />
     <Directions />
+    <Waicon />
     </div>
   );
 }
