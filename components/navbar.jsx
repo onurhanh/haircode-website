@@ -10,29 +10,38 @@ const Navbar = () => {
   const [bgTransparent, setBgTransparent] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const scrollTimeoutRef = useRef(null);
 
-  // ✅ Menü durumu için ref (her zaman güncel değeri taşır)
+  // Menü durumu için ref (her zaman güncel değeri taşır)
   const isMenuOpenRef = useRef(false);
 
-  // ✅ isMenuOpen değiştiğinde ref’i güncelle
+  // isMenuOpen değiştiğinde ref’i güncelle
   useEffect(() => {
     isMenuOpenRef.current = isMenuOpen;
   }, [isMenuOpen]);
 
-  // ✅ Scroll olunca menüyü kapat
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
 
+      // SADECE MASAÜSTÜ İÇİN (>= 1024px)
       if (window.innerWidth >= 1024) {
-        if (currentY > lastScrollY && currentY > 100) {
-          setShow(false);
-        } else {
+        // Scroll esnasında gizle
+        setShow(false);
+
+        // Önceki timeout'u temizle
+        if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+
+        // Scroll durduktan sonra 200ms içinde göster
+        scrollTimeoutRef.current = setTimeout(() => {
           setShow(true);
-        }
+        }, 200);
+      } else {
+        // Mobil ve tablet: navbar hep açık
+        setShow(true);
       }
 
-      // ✅ Menü açıksa scroll olunca kapat
+      // Menü açıksa scroll ile kapat
       if (isMenuOpenRef.current) {
         setIsMenuOpen(false);
       }
@@ -43,7 +52,8 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
+
 
   const navLink = (href, label) => (
     <div className="relative group px-2 py-1 inline-block cursor-pointer">
@@ -101,7 +111,7 @@ const Navbar = () => {
         {/* Sağ: “Yol Tarifi” ve “Randevu Al” */}
         <div className="flex items-center gap-4">
           <div className="hidden lg:block">
-            {navLink("#iletisim", "Yol Tarifi")}
+            {navLink("#yoltarifi", "Yol Tarifi")}
           </div>
           <Button asChild className="rounded-none cursor-pointer text-xs md:text-sm lg:text-base">
             <a
