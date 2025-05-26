@@ -16,18 +16,15 @@ import {
   AlertDialogDescription,
 } from "@/components/ui/alert-dialog";
 
-
 const Navbar = () => {
   const [show, setShow] = useState(true);
   const [bgTransparent, setBgTransparent] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
   const scrollTimeoutRef = useRef(null);
-
-  // Menü durumu için ref (her zaman güncel değeri taşır)
   const isMenuOpenRef = useRef(false);
 
-  // isMenuOpen değiştiğinde ref’i güncelle
   useEffect(() => {
     isMenuOpenRef.current = isMenuOpen;
   }, [isMenuOpen]);
@@ -36,26 +33,22 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentY = window.scrollY;
 
-      // SADECE MASAÜSTÜ İÇİN (>= 1024px)
       if (window.innerWidth >= 1024) {
-        // Scroll esnasında gizle
         setShow(false);
-
-        // Önceki timeout'u temizle
         if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
-
-        // Scroll durduktan sonra 200ms içinde göster
-        scrollTimeoutRef.current = setTimeout(() => {
-          setShow(true);
-        }, 200);
+        scrollTimeoutRef.current = setTimeout(() => setShow(true), 200);
       } else {
-        // Mobil ve tablet: navbar hep açık
         setShow(true);
       }
 
-      // Menü açıksa scroll ile kapat
       if (isMenuOpenRef.current) {
         setIsMenuOpen(false);
+      }
+
+      if (currentY > lastScrollY && currentY > 50) {
+        setShowLogo(false);
+      } else {
+        setShowLogo(true);
       }
 
       setBgTransparent(currentY <= 50);
@@ -64,16 +57,14 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  }, [lastScrollY]);
 
   const navLink = (href, label) => (
     <div className="relative group px-2 py-1 inline-block cursor-pointer">
       <a href={href} className="text-white">
         {label}
       </a>
-      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 
-                    group-hover:w-full transition-all duration-300"></span>
+      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
     </div>
   );
 
@@ -83,8 +74,7 @@ const Navbar = () => {
       className="text-white relative group px-2 py-1 inline-block cursor-pointer"
     >
       {label}
-      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 
-                     group-hover:w-full transition-all duration-300"></span>
+      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
     </a>
   );
 
@@ -99,7 +89,6 @@ const Navbar = () => {
         text-white`}
     >
       <div className="max-w-7xl mx-auto py-4 px-8 md:px-14 lg:px-4 flex justify-between items-center relative">
-        {/* Mobilde sol: hamburger */}
         <button
           className="lg:hidden text-2xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -107,7 +96,6 @@ const Navbar = () => {
           {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
         </button>
 
-        {/* Masaüstüde sol: normal linkler */}
         <div className="hidden lg:flex space-x-3 text-sm">
           {navLink("/", "Anasayfa")}
           {navLink("#hakkimizda", "Hakkımızda")}
@@ -115,16 +103,19 @@ const Navbar = () => {
           {navLink("#iletisim", "İletişim")}
         </div>
 
-        {/* Ortadaki başlık */}
-        <h1 className="font-bold text-2xl absolute left-1/2 transform -translate-x-1/2">
-          HAIR CODE
-        </h1>
+        <div className='absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-300'>
+          {showLogo ? (
+            <img className='relative lg:top-14 sm:w-45 sm:top-8 top-6 w-35 lg:w-60' src="logo.png" alt="hair-code" />
+          ) : (
+            <span className="text-white text-xl font-bold">HAIR CODE</span>
+          )}
+        </div>
 
-        {/* Sağ: “Yol Tarifi” ve “Randevu Al” */}
         <div className="flex items-center gap-4">
           <div className="hidden lg:block">
             {navLink("#yoltarifi", "Yol Tarifi")}
           </div>
+
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button className="rounded-none cursor-pointer text-xs md:text-sm lg:text-base">
@@ -153,8 +144,6 @@ const Navbar = () => {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-
-
         </div>
       </div>
 

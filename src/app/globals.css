@@ -121,3 +121,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Google Translate banner'ını ve logosunu tamamen gizle */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+html body .goog-te-banner-frame {
+  display: none !important;
+}
+
+html body .goog-te-gadget-icon {
+  display: none !important;
+}
+
+html body {
+  top: 0px !important;
+  position: static !important;
+}

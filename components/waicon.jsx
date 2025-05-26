@@ -19,7 +19,7 @@ export default function Waicon() {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <button
-          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
+          className="cursor-pointer fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
           aria-label="WhatsApp ile iletişim"
         >
           <FaWhatsapp size={24} />
