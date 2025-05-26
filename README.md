@@ -1,5 +1,28 @@
-Modern ve mobil uyumlu bir kuaför web sitesi.  
-Framer Motion ile animasyonlu geçişler, Swiper slider, sabit navbar ve WhatsApp entegrasyonu içerir.
+# 💇 HairCode – Modern Kuaför Web Sitesi
 
-📌 Kullanım Alanı: Kuaför, güzellik salonu, randevu bazlı işletmeler  
-🛠️ Teknolojiler: React, Next.js, Tailwind CSS, Framer Motion, SwiperJS
+HairCode, şık ve kullanıcı dostu bir kuaför web sitesi tasarımıdır.  
+Framer Motion ile akıcı animasyonlar, Swiper ile görsel slider, sabit navbar ve mobil uyumlu yapı ile güzellik salonları için hazır bir çözüm sunar.
+
+## 🌐 Canlı Demo
+
+[🔗 Siteyi Görüntüle](https://hair-code-opal.vercel.app/)  
+
+---
+
+## ✨ Özellikler
+
+- 🚀 **Tam ekran slider** – görsel etki için SwiperJS kullanıldı
+- 🎯 **Animasyonlu navbar** – scroll davranışına göre gizlenip gösterilir
+- 💬 **WhatsApp entegrasyonu** – tek tıkla mesaj gönderme
+- 📱 **Mobil ve tablet uyumlu** – responsive tasarım
+- 🌙 **Framer Motion animasyonları** – yazı geçişleri ve menü hareketleri
+- 📍 **Google Maps** – sabit konum gösterimi
+
+## 🛠️ Kullanılan Teknolojiler
+
+- **Next.js 14**
+- **React 18**
+- **Tailwind CSS**
+- **Framer Motion**
+- **SwiperJS**
+- **React Icons**
