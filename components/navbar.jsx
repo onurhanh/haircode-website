@@ -60,12 +60,12 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const navLink = (href, label) => (
-    <div className="relative group px-2 py-1 inline-block cursor-pointer">
+    <button className="relative group px-2 py-1 inline-block cursor-pointer">
       <a href={href} className="text-white">
         {label}
       </a>
       <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
-    </div>
+    </button>
   );
 
   const navLinkMobile = (href, label) => (
@@ -96,12 +96,12 @@ const Navbar = () => {
           {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
         </button>
 
-        <div className="hidden lg:flex space-x-3 text-sm">
+        <button className="hidden lg:flex space-x-3 text-sm">
           {navLink("/", "Anasayfa")}
           {navLink("#hakkimizda", "Hakkımızda")}
           {navLink("#hizmetler", "Hizmetler")}
           {navLink("#iletisim", "İletişim")}
-        </div>
+        </button>
 
         <div className='absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-300'>
           {showLogo ? (
