@@ -1,6 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Oswald } from 'next/font/google';
+import { Playfair_Display, Poppins } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 
 const oswald = Oswald({
   subsets: ['latin'],

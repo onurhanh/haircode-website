@@ -68,15 +68,35 @@ const Navbar = () => {
     </button>
   );
 
-  const navLinkMobile = (href, label) => (
-    <a
-      href={href}
-      className="text-white relative group px-2 py-1 inline-block cursor-pointer"
-    >
-      {label}
+  const navLinkMobile = (href, label, isExternal = false) => {
+    const commonClasses = "text-white relative group px-2 py-1 inline-block cursor-pointer";
+    const underline = (
       <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
-    </a>
-  );
+    );
+
+    if (isExternal) {
+      return (
+        <div className="inline-block">
+          <button
+            onClick={() => window.open(href, "_blank")}
+            className={commonClasses}
+          >
+            {label}
+            {underline}
+          </button>
+        </div>
+      );
+    }
+
+    return (
+      <a href={href} className={commonClasses}>
+        {label}
+        {underline}
+      </a>
+    );
+  };
+
+
 
   return (
     <motion.nav
@@ -105,16 +125,26 @@ const Navbar = () => {
 
         <div className='absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-300'>
           {showLogo ? (
-            <img className='relative lg:top-14 sm:w-45 sm:top-8 top-6 w-35 lg:w-60' src="logo.png" alt="hair-code" />
+            <span className="text-white text-3xl font-bold">HAIR CODE</span>
           ) : (
-            <span className="text-white text-xl font-bold">HAIR CODE</span>
+            <span className="text-white text-2xl font-bold">HAIR CODE</span>
           )}
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden lg:block">
-            {navLink("#yoltarifi", "Yol Tarifi")}
-          </div>
+          <button
+            onClick={() =>
+              window.open(
+                "https://www.google.com/maps/place/Hair+Code+Suadiye+Kuaf%C3%B6r/@40.9603149,29.0764145,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac751c5bf33dd:0x7c10b5cb411b305e!8m2!3d40.9603149!4d29.0789894!16s%2Fg%2F11y9d2jx51?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D",
+                "_blank"
+              )
+            }
+            className="relative group px-2 py-1 xl:inline-block cursor-pointer hidden"
+          >
+            <span className="text-white">Yol Tarifi</span>
+            <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
+          </button>
+
 
           <AlertDialog>
             <AlertDialogTrigger asChild>
@@ -161,7 +191,9 @@ const Navbar = () => {
             {navLinkMobile("#hakkimizda", "Hakkımızda")}
             {navLinkMobile("#hizmetler", "Hizmetler")}
             {navLinkMobile("#iletisim", "İletişim")}
-            {navLinkMobile("#iletisim", "Yol Tarifi")}
+            {navLinkMobile("https://www.google.com/maps/place/Hair+Code+Suadiye+Kuaf%C3%B6r/@40.9603149,29.0764145,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac751c5bf33dd:0x7c10b5cb411b305e!8m2!3d40.9603149!4d29.0789894!16s%2Fg%2F11y9d2jx51?entry=ttu",
+              "Yol Tarifi", true)}
+
           </motion.div>
         )}
       </AnimatePresence>
