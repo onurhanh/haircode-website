@@ -24,7 +24,8 @@ export default function Footer() {
         <div className="text-l space-y-3 text-center md:text-left">
           <div className="flex justify-center md:justify-start items-center gap-2">
             <FaMapMarkerAlt className="text-[#a78c6b]" />
-            <span>Suadiye, İstanbul</span>
+            <span>Suadiye, Pembegül Sok. <br /> Zatibey Apt. No:2/A<br />
+              Kadıköy / İstanbul</span>
           </div>
           <div className="flex justify-center md:justify-start items-center gap-2">
             <FaPhoneAlt className="text-[#a78c6b]" />
