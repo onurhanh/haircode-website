@@ -139,7 +139,7 @@ const Navbar = () => {
                 "_blank"
               )
             }
-            className="relative group px-2 py-1 xl:inline-block cursor-pointer hidden"
+            className="relative group px-2 py-1 lg:inline-block cursor-pointer hidden"
           >
             <span className="text-white">Yol Tarifi</span>
             <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
