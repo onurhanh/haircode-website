@@ -25,8 +25,11 @@ export default function Contact() {
           <div className="flex flex-col items-center text-center md:border-l md:border-r border-gray-300 px-0 md:px-4">
             <FaPhoneAlt className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Telefon</h3>
+            <div className="space-y-1">
             <p className="text-sm">+90 (541) 252 48 64</p>
             <p className="text-sm">+90 (534) 688 87 41</p>
+            </div>
+
           </div>
 
           {/* Instagram */}
