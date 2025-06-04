@@ -37,7 +37,7 @@ export default function Contact() {
             <FaInstagram className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Instagram</h3>
             <a
-              href="https://instagram.com/haircode"
+              href="https://instagram.com/hair.c0de"
               target="_blank"
               rel="noreferrer"
               className="hover:underline text-sm"

@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <div className="flex justify-center sm:justify-start items-center gap-2">
             <FaInstagram className="text-[#DDD8D4]" />
-            <a href="https://instagram.com/haircode" target="_blank" rel="noreferrer" className="hover:underline pl-1">haircode</a>
+            <a href="https://instagram.com/hair.c0de" target="_blank" rel="noreferrer" className="hover:underline pl-1">haircode</a>
           </div>
         </div>
 
