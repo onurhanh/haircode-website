@@ -26,7 +26,7 @@ export default function Contact() {
             <FaPhoneAlt className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Telefon</h3>
             <p className="text-sm">+90 (541) 252 48 64</p>
-            <p className="text-sm">+90 (541) 252 48 64</p>
+            <p className="text-sm">+90 (534) 688 87 41</p>
           </div>
 
           {/* Instagram */}
