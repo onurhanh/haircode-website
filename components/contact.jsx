@@ -42,7 +42,7 @@ export default function Contact() {
               rel="noreferrer"
               className="hover:underline text-sm"
             >
-              @haircode
+              @hair.c0de
             </a>
           </div>
         </div>
