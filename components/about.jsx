@@ -12,7 +12,7 @@ export default function About() {
             viewport={{ once: true }}
             className="w-full flex justify-center items-center">
             <motion.img
-              className="object-cover h-95 w-70 lg:w-100 lg:h-130 sm:w-80 sm:h-100 flex overflow-hidden rounded-lg"
+              className="object-cover h-95 w-70 lg:w-130 lg:h-160 sm:w-80 sm:h-100 flex overflow-hidden rounded-lg shadow-2xl"
               whileHover={{ scale: 0.95, filter: "brightness(0.75)" }}
               transition={{ duration: 0.3 }}
               src="/store.webp" alt="store" />
