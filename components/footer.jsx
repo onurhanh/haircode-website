@@ -41,10 +41,10 @@ export default function Footer() {
         <div className="space-y-4 text-center sm:text-left">
           <div className="flex justify-center sm:justify-start items-start gap-2">
             <FaMapMarkerAlt className="text-[#DDD8D4] mt-1" />
-            <span>
+            <p>
               Suadiye, Pembegül Sok. <br /> Zatibey Apt. No:2/A<br />
               Kadıköy / İstanbul
-            </span>
+            </p>
           </div>
           <div className="flex justify-center sm:justify-start items-center gap-2">
             <FaPhoneAlt className="text-[#DDD8D4]" />
