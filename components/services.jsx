@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export default function Services() {
   return (
-    <section id="hizmetler" className="flex font-sans min-h-screen bg-[#FAFAFA] px-8 sm:py-30">
+    <section id="hizmetler" className="flex font-sans min-h-screen bg-[#FAFAFA] px-8 sm:py-30 py-17">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, x: 0, y: -50 }}

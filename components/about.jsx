@@ -3,7 +3,7 @@ export default function About() {
   return (
     <main>
 
-      <section id="hakkimizda" className="w-full font-sans bg-[#FAFAFA] px-8 lg:pt-35 py-18  items-center flex">
+      <section id="hakkimizda" className="w-full font-sans bg-[#FAFAFA] px-8 sm:pt-35 pt-20  items-center flex">
         <div className="sm:flex max-w-6xl mx-auto items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
