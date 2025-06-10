@@ -12,7 +12,7 @@ export default function SliderContent() {
 
       {/* Aşağıdan çıkan adres */}
       <motion.div
-        className="max-w-2xl text-center font-semibold w-full mx-auto text-xs tracking-wider leading-relaxed uppercase"
+        className="max-w-2xl text-center font-semibold mx-auto text-xs tracking-wider leading-relaxed uppercase"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}

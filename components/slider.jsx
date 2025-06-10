@@ -30,7 +30,7 @@ const HeroSlider = () => {
     return (
         <div className="relative">
             {/* Navbar */}
-            <div id="/" className="absolute z-50 w-full">
+            <div id="/" className="absolute z-50">
                 <Navbar />
             </div>
 
@@ -58,7 +58,7 @@ const HeroSlider = () => {
                 loop={true}
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                 fadeEffect={{ crossFade: true }}
-                className="w-full h-screen z-10 relative"
+                className="h-screen w-screen z-10 relative"
                 speed={1700}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
@@ -67,7 +67,7 @@ const HeroSlider = () => {
                         <img
                             src={src}
                             alt={`Slide ${i + 1}`}
-                            className="w-full h-full object-cover"
+                            className="h-screen w-screen object-cover"
                         />
                     </SwiperSlide>
                 ))}
