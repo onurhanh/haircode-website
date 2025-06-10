@@ -10,7 +10,7 @@ const instagramImages = [
 
 export default function InstagramFeed() {
   return (
-    <section className="bg-[#f8f4ee] py-10 px-6">
+    <section id="galeri" className="bg-[#f8f4ee] py-10 px-6">
       <h2 className="text-2xl font-semibold text-center mb-6">Instagram'da Biz</h2>
       <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {instagramImages.map((src, i) => (

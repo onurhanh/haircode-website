@@ -13,10 +13,28 @@ export default function Footer() {
       viewport={{ once: true }}
       className="bg-[#191919] text-[#DDD8D4] px-4 sm:px-6 md:px-10 py-12 sm:py-16"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-6 py-10 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-6 py-10 items-start font-sans">
         {/* Logo */}
         <div className="text-center sm:text-left">
           <img src="/logo.png" alt="logo" className="mx-auto sm:mx-0 w-45 h-auto" />
+        </div>
+
+        <div className="space-y-2 text-center sm:text-left">
+          <a href="#hakkimizda" className="block hover:text-[#8b7e74] transition">Hakkımızda</a>
+          <a href="#hizmetler" className="block hover:text-[#8b7e74] transition">Hizmetler</a>
+          <a href="#iletisim" className="block hover:text-[#8b7e74] transition">İletişim</a>
+          <a href="#galeri" className="block hover:text-[#8b7e74] transition">Galeri</a>
+          <button
+            onClick={() =>
+              window.open(
+                "https://www.google.com/maps/place/Hair+Code+Suadiye+Kuaf%C3%B6r/@40.9603149,29.0764145,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac751c5bf33dd:0x7c10b5cb411b305e!8m2!3d40.9603149!4d29.0789894!16s%2Fg%2F11y9d2jx51?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D",
+                "_blank"
+              )
+            }
+            className="block hover:text-[#8b7e74] cursor-pointer transition mx-auto sm:mx-0"
+          >
+            Yol Tarifi
+          </button>
         </div>
 
         {/* İletişim */}
@@ -46,31 +64,15 @@ export default function Footer() {
         </div>
 
         {/* Hizmetler */}
-        <div className="space-y-2 text-center sm:text-left">
-          <a href="#hakkimizda" className="block hover:text-[#8b7e74] transition">Hakkımızda</a>
-          <a href="#hizmetler" className="block hover:text-[#8b7e74] transition">Hizmetler</a>
-          <a href="#iletisim" className="block hover:text-[#8b7e74] transition">İletişim</a>
-          <button
-            onClick={() =>
-              window.open(
-                "https://www.google.com/maps/place/Hair+Code+Suadiye+Kuaf%C3%B6r/@40.9603149,29.0764145,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac751c5bf33dd:0x7c10b5cb411b305e!8m2!3d40.9603149!4d29.0789894!16s%2Fg%2F11y9d2jx51?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D",
-                "_blank"
-              )
-            }
-            className="block hover:text-[#8b7e74] cursor-pointer transition mx-auto sm:mx-0"
-          >
-            Yol Tarifi
-          </button>
-        </div>
+
 
         {/* Çalışma Saatleri */}
         <div className="text-center sm:text-left space-y-2">
           <div className="flex justify-center sm:justify-start items-start gap-2">
             <FaClock className="text-[#DDD8D4] mt-1" />
             <div>
-              <p>Pazartesi - Cumartesi</p>
-              <p>09:00 - 19:00</p>
-              <p className="mt-1">Pazar: Kapalı</p>
+              <p>Pazartesi - Pazar</p>
+              <p>10:00 - 20:00</p>
             </div>
           </div>
         </div>
@@ -78,7 +80,7 @@ export default function Footer() {
 
 
       {/* Alt Bilgi */}
-      <div className="mt-10 text-center text-sm text-[#DDD8D4] border-t pt-6 border-[#DDD8D4] ">
+      <div className="mt-10 text-center text-sm text-[#DDD8D4] border-t pt-6 border-[#DDD8D4] font-sans max-w-6xl mx-auto">
         © {new Date().getFullYear()} Hair Code Kuaför. Tüm hakları saklıdır.
       </div>
     </motion.footer>

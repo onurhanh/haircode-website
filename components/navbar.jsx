@@ -60,16 +60,16 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const navLink = (href, label) => (
-    <button className="relative group px-2 py-1 inline-block cursor-pointer">
+    <button className="relative group px-2 inline-block cursor-pointer">
       <a href={href} className="text-white">
         {label}
       </a>
-      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
+      <a href={href} className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></a>
     </button>
   );
 
   const navLinkMobile = (href, label, isExternal = false) => {
-    const commonClasses = "text-white relative group px-2 py-1 inline-block cursor-pointer";
+    const commonClasses = "text-white relative group px-2 inline-block cursor-pointer";
     const underline = (
       <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
     );
@@ -120,6 +120,7 @@ const Navbar = () => {
           {navLink("/", "Anasayfa")}
           {navLink("#hakkimizda", "Hakkımızda")}
           {navLink("#hizmetler", "Hizmetler")}
+          {navLink("#galeri", "Galeri")}
           {navLink("#iletisim", "İletişim")}
         </button>
 
@@ -191,6 +192,7 @@ const Navbar = () => {
             {navLinkMobile("#hakkimizda", "Hakkımızda")}
             {navLinkMobile("#hizmetler", "Hizmetler")}
             {navLinkMobile("#iletisim", "İletişim")}
+            {navLinkMobile("#galeri", "Galeri")}
             {navLinkMobile("https://www.google.com/maps/place/Hair+Code+Suadiye+Kuaf%C3%B6r/@40.9603149,29.0764145,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac751c5bf33dd:0x7c10b5cb411b305e!8m2!3d40.9603149!4d29.0789894!16s%2Fg%2F11y9d2jx51?entry=ttu",
               "Yol Tarifi", true)}
 

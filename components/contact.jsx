@@ -1,39 +1,52 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="iletisim" className=" text-[#2e2e2e] py-20 px-4 sm:px-6">
+    <section id="iletisim" className=" text-[#2e2e2e] py-15 sm:py-20 px-4 font-sans sm:px-6 bg-[#FAFAFA]">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-4">İletişim</h2>
-        <p className="text-sm text-gray-600 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">İletişim</h2>
+        <p className="text-sm text-gray-600 mb-5 sm:mb-12">
           Aşağıdaki bilgiler üzerinden bizimle iletişime geçebilirsiniz.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Adres */}
-          <div className="flex flex-col items-center text-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }} className="flex flex-col items-center text-center">
             <FaMapMarkerAlt className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Adres</h3>
             <p className="text-sm leading-relaxed">
               Suadiye, Pembegül Sok. Zatibey Apt. No:2/A<br />
               Kadıköy / İstanbul
             </p>
-          </div>
+          </motion.div>
 
           {/* Telefon */}
-          <div className="flex flex-col items-center text-center md:border-l md:border-r border-gray-300 px-0 md:px-4">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }} className="flex flex-col items-center text-center md:border-l md:border-r border-gray-300 px-0 md:px-4">
             <FaPhoneAlt className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Telefon</h3>
             <div className="space-y-1">
-            <p className="text-sm">+90 (541) 252 48 64</p>
-            <p className="text-sm">+90 (534) 688 87 41</p>
+              <p className="text-sm">+90 (541) 252 48 64</p>
+              <p className="text-sm">+90 (534) 688 87 41</p>
             </div>
-
-          </div>
+          </motion.div>
 
           {/* Instagram */}
-          <div className="flex flex-col items-center text-center">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center text-center">
             <FaInstagram className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Instagram</h3>
             <a
@@ -44,12 +57,13 @@ export default function Contact() {
             >
               @haircode
             </a>
-          </div>
+          </motion.div>
+
         </div>
       </div>
 
       {/* Harita */}
-      <div className="max-w-6xl mx-auto pt-16 px-4">
+      <div className="max-w-6xl mx-auto sm:pt-16 pt-6 px-4">
         <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
           <iframe
             title="Salon Konumu"
@@ -63,6 +77,6 @@ export default function Contact() {
           ></iframe>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
