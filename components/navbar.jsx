@@ -103,7 +103,7 @@ const Navbar = () => {
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
+      className={`fixed top-0 left-0 w-screen z-50 transition-all duration-500
         ${show ? 'translate-y-0' : '-translate-y-full'}
         ${bgTransparent ? 'bg-transparent' : 'bg-black'} 
         text-white`}

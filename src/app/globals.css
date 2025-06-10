@@ -122,5 +122,6 @@
   }
   body {
     font-family: 'Inter Tight', sans-serif;
+    overflow-x: hidden;
   }
 }
