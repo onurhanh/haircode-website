@@ -7,6 +7,7 @@ import { FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaClock } from "react-icons/fa
 export default function Footer() {
   return (
     <section>
+      <div>
     <motion.footer
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -85,6 +86,7 @@ export default function Footer() {
         © {new Date().getFullYear()} Hair Code Kuaför. Tüm hakları saklıdır.
       </div>
     </motion.footer>
+    </div>
     </section>
   );
 }
