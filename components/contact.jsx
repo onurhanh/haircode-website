@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="iletisim" className=" text-[#2e2e2e] py-15 sm:py-20 px-4 font-sans sm:px-6 bg-[#FAFAFA]">
+    <section id="iletisim" className=" text-[#2e2e2e] py-17 sm:py-20 px-4 font-sans sm:px-6 bg-[#FAFAFA]">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">İletişim</h2>
         <p className="text-sm text-gray-600 mb-5 sm:mb-12">
