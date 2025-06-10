@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export default function Services() {
   return (
-    <section id="hizmetler" className="flex font-sans min-h-screen bg-[#FAFAFA] px-8 py-30">
+    <section id="hizmetler" className="flex font-sans min-h-screen bg-[#FAFAFA] px-8 sm:py-30">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, x: 0, y: -50 }}
@@ -9,9 +9,9 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="md:text-5xl text-3xl mb-15 justify-center flex">Hizmetlerimiz</h2>
+          <h2 className="md:text-5xl text-3xl mb-10 sm:mb-15 justify-center flex">Hizmetlerimiz</h2>
         </motion.div>
-        <div className="flex gap-20 flex-wrap justify-center">
+        <div className="flex gap-10 sm:gap-20 flex-wrap justify-center">
           <motion.div
             initial={{ opacity: 0, x: -50, y: 0 }}
             whileInView={{ opacity: 1, x: 0, y: 0 }}
