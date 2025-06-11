@@ -20,7 +20,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl filter brightness-50  hover:brightness-75 transition duration-300 ease-in-out"
-              src="/services-content.png" alt="content" />
+              src="/ombre.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">ombre / sombre</p>
           </motion.div>
           <motion.div
@@ -31,7 +31,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl filter brightness-50  hover:brightness-75 transition duration-300 ease-in-out"
-              src="/services-content.png" alt="content" />
+              src="/brushlight.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">brushlight</p>
           </motion.div>
           <motion.div
@@ -42,7 +42,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl filter brightness-50  hover:brightness-75 transition duration-300 ease-in-out"
-              src="/services-content.png" alt="content" />
+              src="/content-1.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">highlight</p>
           </motion.div>
           <motion.div
@@ -64,7 +64,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl filter brightness-50  hover:brightness-75 transition duration-300 ease-in-out"
-              src="/services-content.png" alt="content" />
+              src="/sackesim.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">saç kesimi</p>
           </motion.div>
           <motion.div
