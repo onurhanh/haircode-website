@@ -14,7 +14,6 @@ const HeroSlider = () => {
     const slides = [
         '/bg-image3.jpg',
         '/bg-image2.jpg',
-        '/picture3.jpg',
         '/picture4.jpg'
     ];
 
