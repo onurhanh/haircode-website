@@ -6,7 +6,7 @@ import { FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaClock } from "react-icons/fa
 
 export default function Footer() {
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <div>
     <motion.footer
       initial={{ opacity: 0, y: 40 }}

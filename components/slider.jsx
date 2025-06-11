@@ -27,7 +27,7 @@ const HeroSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="relative">
+        <div className="relative overflow-x-hidden">
             {/* Navbar */}
             <div id="/" className="absolute z-50">
                 <Navbar />

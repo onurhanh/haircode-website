@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function SliderContent() {
   return (
-    <div className="scroll-mt-1 absolute z-10 lg:top-3/4 top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white uppercase">
+    <div className="scroll-mt-1 overflow-x-hidden absolute z-10 lg:top-3/4 top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white uppercase">
 
       {/* Dikey çizgi */}
       <div className="w-px h-13 lg:h-20 bg-white mx-auto my-5 lg:my-10" />

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export default function About() {
   return (
-      <section id="hakkimizda" className="font-sans bg-[#FAFAFA] px-8 sm:pt-18 pt-20  items-center flex">
+      <section id="hakkimizda" className="font-sans bg-[#FAFAFA] px-8 sm:pt-18 pt-20  items-center flex overflow-x-hidden">
         <div className="sm:flex lg:pt-30 max-w-6xl mx-auto items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

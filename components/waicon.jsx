@@ -16,6 +16,9 @@ import {
 
 export default function Waicon() {
   return (
+    <div className='overflow-x-hidden'>
+
+
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <button
@@ -48,5 +51,6 @@ export default function Waicon() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
+        </div>
   );
 }
