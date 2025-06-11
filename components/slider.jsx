@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import Navbar from './navbar';
 import SliderContent from './slider-content';
 import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,11 +27,6 @@ const HeroSlider = () => {
 
     return (
         <div className="relative overflow-x-hidden">
-            {/* Navbar */}
-            <div id="/" className="absolute z-50">
-                <Navbar />
-            </div>
-
             {/* Ortadaki yazı */}
             <div className="absolute inset-0 flex lg:top-1/2 top-5/9 justify-center z-30 pointer-events-none">
                 <AnimatePresence mode="wait">
