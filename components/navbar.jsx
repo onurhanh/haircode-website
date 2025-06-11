@@ -187,8 +187,8 @@ const Navbar = () => {
             {navLinkMobile("/", "Anasayfa")}
             {navLinkMobile("#hakkimizda", "Hakkımızda")}
             {navLinkMobile("#hizmetler", "Hizmetler")}
-            {navLinkMobile("#iletisim", "İletişim")}
             {navLinkMobile("#galeri", "Galeri")}
+            {navLinkMobile("#iletisim", "İletişim")}
             {navLinkMobile("https://www.google.com/maps/place/Hair+Code+Suadiye+Kuaf%C3%B6r/@40.9603149,29.0764145,17z/data=!3m1!4b1!4m6!3m5!1s0x14cac751c5bf33dd:0x7c10b5cb411b305e!8m2!3d40.9603149!4d29.0789894!16s%2Fg%2F11y9d2jx51?entry=ttu",
               "Yol Tarifi", true)}
 
