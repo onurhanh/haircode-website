@@ -12,8 +12,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSlider = () => {
     const slides = [
-        '/picture.jpg',
-        '/picture2.jpg',
+        '/bg-image3.jpg',
+        '/bg-image2.jpg',
         '/picture3.jpg',
         '/picture4.jpg'
     ];
