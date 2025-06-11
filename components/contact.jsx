@@ -34,9 +34,13 @@ export default function Contact() {
             viewport={{ once: true }} className="flex flex-col items-center text-center md:border-l md:border-r border-gray-300 px-0 md:px-4">
             <FaPhoneAlt className="text-[#8b7e74] text-2xl mb-2" />
             <h3 className="text-lg font-semibold mb-1">Telefon</h3>
-            <div className="space-y-1">
-              <p className="text-sm lg:mb-1 mb-2">+90 (541) 252 48 64</p>
-              <p className="text-sm">+90 (534) 688 87 41</p>
+            <div className="space-y-1 flex-col">
+              <div>
+              <a href="tel:+905346888741" className="hover:underline">+90 534 688 87 41</a>
+              </div>
+              <div>
+              <a href="tel:+905412524864" className="hover:underline ">+90 541 252 48 64</a>
+              </div>
             </div>
           </motion.div>
 
