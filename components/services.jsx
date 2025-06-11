@@ -31,7 +31,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
-              src="/sombre2.jpg" alt="content" />
+              src="/sombre.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">sombre</p>
           </motion.div>
           <motion.div
@@ -53,7 +53,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
-              src="/highlight.jpg" alt="content" />
+              src="/highlight2.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">highlight</p>
           </motion.div>
           <motion.div
@@ -86,7 +86,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
-              src="/keratin.jpg" alt="content" />
+              src="/keratin2.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-center text-white tracking-widest">keratin / kolajen bakımı</p>
           </motion.div>
           <motion.div
@@ -97,7 +97,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
-              src="/kaynak2.jpg" alt="content" />
+              src="/kaynak3.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest letter-spacing-">kaynak işlemi</p>
           </motion.div>
         </div>
