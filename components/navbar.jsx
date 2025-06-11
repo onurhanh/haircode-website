@@ -182,7 +182,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="lg:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3 text-base w-full max-w-full"
+            className="lg:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3 text-base w-full max-w-full overflow-x-block"
           >
             {navLinkMobile("/", "Anasayfa")}
             {navLinkMobile("#hakkimizda", "Hakkımızda")}
