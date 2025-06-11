@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 export default function About() {
   return (
-    <main>
-
       <section id="hakkimizda" className="font-sans bg-[#FAFAFA] px-8 sm:pt-18 pt-20  items-center flex">
-        <div className="sm:flex max-w-6xl mx-auto items-center">
+        <div className="sm:flex lg:pt-30 max-w-6xl mx-auto items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -31,6 +29,5 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-    </main>
   );
 }
