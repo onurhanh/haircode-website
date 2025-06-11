@@ -19,7 +19,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="shadow-2xl relative rounded-xl">
             <img
-              className="max-w-[250px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
+              className="max-w-[250px] max-h-[444px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
               src="/ombre.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">ombre</p>
           </motion.div>
@@ -30,7 +30,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="shadow-2xl relative rounded-xl">
             <img
-              className="max-w-[250px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
+              className="max-w-[250px] rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
               src="/sombre.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">sombre</p>
           </motion.div>
@@ -63,7 +63,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="shadow-2xl relative rounded-xl">
             <img
-              className="max-w-[250px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
+              className="max-w-[250px] max-h-[444px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
               src="/acmaboyama2.jpg" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">açma / boyama</p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="shadow-2xl relative rounded-xl">
             <img
-              className="max-w-[250px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
+              className="max-w-[250px] max-h-[444px] h-full rounded-xl lg:filter lg:brightness-50  lg:hover:brightness-75 transition duration-300 ease-in-out"
               src="/sackesim.JPG" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">saç kesimi</p>
           </motion.div>
