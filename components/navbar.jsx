@@ -70,9 +70,7 @@ const Navbar = () => {
 
   const navLinkMobile = (href, label, isExternal = false) => {
     const commonClasses = "text-white relative group px-2 inline-block cursor-pointer";
-    const underline = (
-      <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
-    );
+
 
     if (isExternal) {
       return (
@@ -82,7 +80,6 @@ const Navbar = () => {
             className={commonClasses}
           >
             {label}
-            {underline}
           </button>
         </div>
       );
@@ -91,7 +88,6 @@ const Navbar = () => {
     return (
       <a href={href} className={commonClasses}>
         {label}
-        {underline}
       </a>
     );
   };
@@ -103,12 +99,12 @@ const Navbar = () => {
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 w-screen z-50 transition-all duration-500
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
         ${show ? 'translate-y-0' : '-translate-y-full'}
         ${bgTransparent ? 'bg-transparent' : 'bg-black'} 
         text-white`}
     >
-      <div className="max-w-7xl mx-auto py-4 px-8 md:px-14 lg:px-4 flex justify-between items-center relative">
+      <div className="lg:max-w-7xl mx-auto py-4 px-8 md:px-14 lg:px-4 flex justify-between items-center relative">
         <button
           className="lg:hidden text-2xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -186,7 +182,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="lg:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3 text-base"
+            className="lg:hidden flex flex-col bg-black text-white px-4 py-4 space-y-3 text-base w-full max-w-full overflow-x-hidden"
           >
             {navLinkMobile("/", "Anasayfa")}
             {navLinkMobile("#hakkimizda", "Hakkımızda")}

@@ -21,7 +21,7 @@ export default function Home() {
     <GoogleReviewsEmbed />
     <Contact />
     <Footer />
-    {/* <Waicon /> */}
+    <Waicon /> 
     </div>
   );
 }

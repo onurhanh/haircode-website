@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-6 py-10 items-start font-sans">
         {/* Logo */}
         <div className="text-center sm:text-left">
-          <img src="/logo.png" alt="logo" className="mx-auto sm:mx-0 w-45 h-auto" />
+          <img src="/logo.png" alt="logo" className="mx-auto sm:mx-0 w-50 h-auto" />
         </div>
 
         <div className="space-y-2 text-center sm:text-left">

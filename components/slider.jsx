@@ -58,7 +58,7 @@ const HeroSlider = () => {
                 loop={true}
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                 fadeEffect={{ crossFade: true }}
-                className="h-screen w-screen z-10 relative"
+                className="h-screen w-full z-10 relative"
                 speed={1700}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
@@ -67,7 +67,7 @@ const HeroSlider = () => {
                         <img
                             src={src}
                             alt={`Slide ${i + 1}`}
-                            className="h-screen w-screen object-cover"
+                            className="h-screen w-full object-cover"
                         />
                     </SwiperSlide>
                 ))}
