@@ -5,7 +5,7 @@ Framer Motion ile akıcı animasyonlar, Swiper ile görsel slider, sabit navbar 
 
 ## 🌐 Canlı Demo
 
-[🔗 Siteyi Görüntüle](https://hair-code-opal.vercel.app/)  
+[🔗 Siteyi Görüntüle](https://www.haircodesuadiye.net/)  
 
 ---
 
