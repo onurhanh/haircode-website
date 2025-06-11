@@ -64,7 +64,7 @@ export default function Services() {
             className="shadow-2xl relative rounded-xl">
             <img
               className="max-w-[250px] rounded-xl filter brightness-50  hover:brightness-75 transition duration-300 ease-in-out"
-              src="/sackesim.jpg" alt="content" />
+              src="/sackesim.JPG" alt="content" />
             <p className="w-full uppercase absolute bottom-5 flex justify-center text-xl text-white tracking-widest">saç kesimi</p>
           </motion.div>
           <motion.div
