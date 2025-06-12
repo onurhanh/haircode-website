@@ -122,9 +122,9 @@ const Navbar = () => {
 
         <div className='absolute left-1/2 transform -translate-x-1/2 transition-opacity duration-300'>
           {showLogo ? (
-            <span className="text-white text-xl sm:text-3xl font-bold">HAIR CODE</span>
+            <span className="text-white text-xl sm:text-4xl font-bold">HAIR CODE</span>
           ) : (
-            <span className="text-white text-xl sm:text-2xl font-bold">HAIR CODE</span>
+            <span className="text-white text-xl sm:text-4xl font-bold">HAIR CODE</span>
           )}
         </div>
 
