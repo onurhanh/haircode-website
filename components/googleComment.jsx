@@ -1,10 +1,9 @@
 export default function GoogleReviewsEmbed() {
     return (
         <section className="px-6 pt-15 sm:pt-20 font-sans overflow-x-hidden bg-[#FAFAFA]">
-            <h2 className="text-3xl font-semibold text-center mb-6">Misafir Yorumları</h2>
             <div className="max-w-4xl mx-auto">
                 <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-69916a4d-d477-4f6e-9808-261501e60343" data-elfsight-app-lazy></div>
+                <div class="elfsight-app-778170dc-1e78-4dc6-8b9c-3834c21226e1" data-elfsight-app-lazy></div>
             </div>
         </section>
     );
