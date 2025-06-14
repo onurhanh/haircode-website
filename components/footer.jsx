@@ -84,7 +84,7 @@ export default function Footer() {
 
       {/* Alt Bilgi */}
       <div className="mt-10 text-center text-sm text-[#DDD8D4] border-t pt-6 border-[#DDD8D4] font-sans max-w-6xl mx-auto">
-        © <a target="blank" href="https://www.onurhanh.net">onurhanh.net</a> 2025 Hair Code Kuaför. Tüm hakları saklıdır.
+        © <a target="blank" href="https://www.onurhanh.net">onurhanh</a> 2025 Hair Code Kuaför. Tüm hakları saklıdır.
       </div>
     </motion.footer>
     </div>
