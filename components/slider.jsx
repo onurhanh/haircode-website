@@ -1,19 +1,27 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import SliderContent from './slider-content';
-import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 
 
 const HeroSlider = () => {
     const slides = [
-        '/bg-image3.jpg',
+        '/bg-image-desktop2.png',
+        '/bg-image-desktop.png',
+        '/bg-image-desktop3.png'
+
+    ];
+
+    const slidesMobile = [
         '/bg-image2.jpg',
+        '/bg-image3.jpg',
         '/picture4.jpg'
+
     ];
 
     const slideTexts = [
@@ -24,6 +32,21 @@ const HeroSlider = () => {
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Ekran boyutuna göre mobil mi kontrol et
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 1024); // lg breakpoint = 1024px
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const slideSet = isMobile ? slidesMobile : slides;
 
     return (
         <div className="relative overflow-x-hidden">
@@ -55,15 +78,18 @@ const HeroSlider = () => {
                 speed={1700}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             >
-                {slides.map((src, i) => (
-                    <SwiperSlide key={i}>
+
+                {slideSet.map((src, i) => (
+                    <SwiperSlide key={i} className="h-screen">
                         <img
                             src={src}
                             alt={`Slide ${i + 1}`}
-                            className="h-screen w-full object-cover"
+                            className="h-full w-full object-cover"
                         />
                     </SwiperSlide>
                 ))}
+
+
             </Swiper>
 
             {/* Alttaki slider content (çizgi + adres) */}

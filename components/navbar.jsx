@@ -59,14 +59,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const navLink = (href, label) => (
-    <button className="relative group px-2 inline-block cursor-pointer">
-      <a href={href} className="text-white">
-        {label}
-      </a>
-      <a href={href} className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300"></a>
-    </button>
-  );
+const navLink = (href, label) => (
+  <a href={href} className="relative group px-2 inline-block cursor-pointer text-white">
+    {label}
+    <span className="absolute left-0 -bottom-0.5 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300" />
+  </a>
+);
+
 
   const navLinkMobile = (href, label, isExternal = false) => {
     const commonClasses = "text-white relative group px-2 inline-block cursor-pointer";
