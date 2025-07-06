@@ -3,11 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaInstagram, FaPhoneAlt, FaMapMarkerAlt, FaClock } from "react-icons/fa";
-import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="overflow-x-hidden">
+    <section className="overflow-x-hidden overflow-y-hidden">
       <div>
     <motion.footer
       initial={{ opacity: 0, y: 40 }}
