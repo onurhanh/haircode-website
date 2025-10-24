@@ -3,6 +3,7 @@ import "./globals.css";
 import { Oswald } from 'next/font/google';
 import { Playfair_Display, Poppins } from 'next/font/google';
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next"
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/haircode-favicon.ico" type="image/x-icon" />
       </Head>
         {children}
+         <Analytics />
       </body>
     </html>
   );
