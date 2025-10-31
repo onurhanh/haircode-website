@@ -36,9 +36,6 @@ export default function Contact() {
             <h3 className="text-lg font-semibold mb-1">Telefon</h3>
             <div className="space-y-1 flex-col">
               <div>
-              <a href="tel:+905346888741" className="hover:underline">+90 534 688 87 41</a>
-              </div>
-              <div>
               <a href="tel:+905412524864" className="hover:underline ">+90 541 252 48 64</a>
               </div>
             </div>
